@@ -17,7 +17,6 @@ if (isset($_GET['searchKeyword']) && trim($_GET['searchKeyword']) !== '') {
         <div class="caption header-text">
           <h6>Welcome to lugx</h6>
           <h2>BEST GAMING SITE EVER!</h2>
-          <p>LUGX Gaming is free Bootstrap 5 HTML CSS website template...</p>
           <div class="search-input">
             <form id="search" action="" method="get">
               <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" value="<?= isset($_GET['searchKeyword']) ? htmlspecialchars($_GET['searchKeyword']) : '' ?>"/>
