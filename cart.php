@@ -11,9 +11,7 @@ $show_checkout = isset($_POST['checkout']);
 $payment_success = false;
 
 if (isset($_POST['pay_now'])) {
-    // Simulate payment success
     $payment_success = true;
-    // Optionally clear cart
     $_SESSION['cart'] = [];
 }
 ?>
@@ -89,7 +87,6 @@ if (isset($_POST['pay_now'])) {
         </form>
       </div>
       <script>
-      // Simple front-end validation
       document.getElementById('paymentForm').onsubmit = function(e) {
         var valid = true;
         var fields = ['card_name','card_number','expiry','cvv','billing'];
