@@ -3,7 +3,7 @@ session_start();
 include 'components.php';
 include 'data.php';
 
-// Get product ID from query string
+
 $product_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 $product = null;
 foreach ($products as $p) {
@@ -13,12 +13,10 @@ foreach ($products as $p) {
     }
 }
 if (!$product) {
-    // Product not found
     header("Location: shop.php");
     exit;
 }
 
-// Handle Add to Cart
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
     $qty = isset($_POST['quantity']) ? max(1, intval($_POST['quantity'])) : 1;
     if (!isset($_SESSION['cart'])) $_SESSION['cart'] = [];

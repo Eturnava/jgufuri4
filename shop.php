@@ -21,7 +21,7 @@ render_header('shop');
 <div class="section trending">
   <div class="container">
 
-    <!-- Filters -->
+
     <?php 
     $categories = array_unique(array_column($products, 'category')); 
     ?>
@@ -34,7 +34,6 @@ render_header('shop');
       <?php endforeach; ?>
     </ul>
 
-    <!-- Products -->
     <div class="row trending-box">
       <?php foreach ($products as $product): ?>
         <div class="col-lg-3 col-md-6 mb-30 trending-items <?php echo $product['category']; ?>">
